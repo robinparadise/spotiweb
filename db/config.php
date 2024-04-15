@@ -125,5 +125,5 @@ function populateData() {
 }
 
 // Populate data
-populateData();
+// populateData();
 ?>

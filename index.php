@@ -14,6 +14,29 @@
     <p>Read the latest news from around the world!</p>
   </div>
 
+  <!-- Grid + card + getNews -->
+
+  <?php 
+    $articles = getNews();
+  ?>
+
+  <div class="container text-center">
+    <div class="row">
+      <?php foreach ($articles as $item) { ?>
+        <div class="col">
+          <div class="card" style="width: 18rem;margin:auto">
+            <img src="<?= $item['image_url']; ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><?= $item['title']; ?></h5>
+              <p class="card-text"><?= $item['category']; ?></p>
+              <a href="#" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>
+      <?php } ?>
+    </div>
+  </div>
+
   <?php include 'components/scripts.php'; ?>
 </body>
 
