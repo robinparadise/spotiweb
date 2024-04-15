@@ -8,6 +8,7 @@
 </head>
 
 <body>
+  <?php $page = 'index' ?>
   <?php include 'components/navbar.php'; ?>
   <div class="container-sm text-center">
     <h1>Spoti <span class="danger">Web</span></h1>
@@ -20,9 +21,11 @@
     $articles = getNews();
   ?>
 
+  <!-- grid -->
   <div class="container text-center">
     <div class="row">
       <?php foreach ($articles as $item) { ?>
+        <!-- card -->
         <div class="col">
           <div class="card" style="width: 18rem;margin:auto">
             <img src="<?= $item['image_url']; ?>" class="card-img-top" alt="...">

@@ -8,3 +8,9 @@ h1, h2, h3, h4, h5, h6 {
 .danger {
   color: lightcoral;
 }
+.nav-link, .navbar-brand {
+  color: black !important;
+}
+.nav-link.active {
+  text-decoration: underline;
+}
