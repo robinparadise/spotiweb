@@ -14,6 +14,9 @@
         <li class="nav-item">
           <a class="nav-link <?= $page == 'profile' ? 'active' : '' ?>" href="/spotiweb/profile.php">Profile</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link <?= $page == 'bookmarks' ? 'active' : '' ?>" href="/spotiweb/bookmarks.php">Bookmarks</a>
+        </li>
       </ul>
     </div>
   </div>
