@@ -12,7 +12,13 @@
       class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
       More
     </button>
-    <i class="fa-regular fa-bookmark"></i>
-    <i class="fa-solid fa-bookmark"></i>
+    <!-- <i class="fa-solid fa-bookmark"></i> -->
+    <form method="post" action="">
+      <input type="hidden" name="id" value="<?= $item['id']; ?>">
+      <button type="submit" name="bookmarks" value="Add to Cart">
+        <i class="fa-regular fa-bookmark"></i>
+      </button>
+    </form>
+
   </div>
 </div>

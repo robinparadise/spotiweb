@@ -19,6 +19,9 @@
 
   <?php 
     $articles = getNews();
+
+    echo "bookmarks: ";
+    echo implode(",", $_SESSION['bookmarks']);
   ?>
 
   <!-- grid -->

@@ -4,9 +4,9 @@ include 'config.php';
 session_start();
 
 // Initialize bookmarks
-// if (!isset($_SESSION['bookmarks'])) {
-  $_SESSION['bookmarks'] = [810, 811, 812];
-// }
+if (!isset($_SESSION['bookmarks'])) {
+  $_SESSION['bookmarks'] = [];
+}
 
 
 function getNews($category = null) {
