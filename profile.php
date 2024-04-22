@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>Spoti Web</title>
+  <title>Profile</title>
   <?php include 'components/head.php'; ?>
 </head>
 
@@ -22,24 +22,8 @@
   ?>
 
   <!-- grid -->
-  <div class="container text-center">
-    <div class="row">
-      <?php foreach ($articles as $item) { ?>
-        <!-- card -->
-        <div class="col">
-          <div class="card" style="width: 18rem;margin:auto">
-            <img src="<?= $item['image_url']; ?>" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"><?= $item['title']; ?></h5>
-              <p class="card-text"><?= $item['category']; ?></p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-      <?php } ?>
-    </div>
-  </div>
-
+  <?php include 'components/grid.php'; ?>
+  <?php include 'components/modal.php'; ?>
   <?php include 'components/scripts.php'; ?>
 </body>
 
