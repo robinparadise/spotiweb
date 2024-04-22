@@ -20,16 +20,24 @@
 
   /* Modal */
   const myModal = document.getElementById('myModal')
-  myModal.addEventListener('shown.bs.modal', (event, other) => {
+  if (myModal) myModal.addEventListener('shown.bs.modal', (event) => {
+    console.log({boton: event.relatedTarget})
+    const boton = event.relatedTarget
+
     // actualizar el title, description, image_url
+    /* modal-title
+       modal-img
+       modal-description
+    */
+    
     const modalTitle = document.querySelector('.modal-title')
-    modalTitle.innerHTML = 'Prueba cambio title'
+    modalTitle.innerHTML = boton.getAttribute('modal-title')
 
     const modalImg = document.querySelector('.modal-img')
-    modalImg.src = "https://picsum.photos/536/354"
+    modalImg.src = boton.getAttribute('modal-img')
 
     const modalDescription = document.querySelector('.modal-description')
-    modalDescription.innerHTML = 'Vinyl office sub-orbital tube sprawl dome car stimulate face forwards motion. Face forwards disposable man spook digital military-grade fluidity range-rover augmented reality hacker. Sprawl drone dead bridge shoes sub-orbital-space tower artisanal. Crypto-hacker geodesic order-flow dome katana vinyl neural concrete knife stimulate artisanal.'
+    modalDescription.innerHTML = boton.getAttribute('modal-description')
   })
 
 </script>
