@@ -40,4 +40,31 @@
     modalDescription.innerHTML = boton.getAttribute('modal-description')
   })
 
+  /* Bookmark form */
+  const bookmarkForms = document.querySelectorAll('.bookmark-form'); // xCard
+  // on submit
+  bookmarkForms.forEach(bookmarkForm => {
+    bookmarkForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(bookmarkForm);
+      const response = await fetch(bookmarkForm.action, {
+        method: bookmarkForm.method,
+        body: formData
+      });
+      const data = await response.json();
+
+      console.log(data);
+
+      const icon = bookmarkForm.querySelector('i');
+      if (icon.classList.contains('fa-regular')) {
+        icon.classList.remove('fa-regular');
+        icon.classList.add('fa-solid');
+      } else {
+        icon.classList.remove('fa-solid');
+        icon.classList.add('fa-regular');
+      }
+    })
+  })
+
 </script>

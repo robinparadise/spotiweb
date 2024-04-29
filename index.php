@@ -10,7 +10,7 @@
 <body>
   <?php $page = 'index' ?>
   <?php include 'components/navbar.php'; ?>
-  <div class="container-sm text-center">
+  <div class="container-sm text-center mt-4">
     <h1>Spoti <span class="danger">Web</span></h1>
     <p>Read the latest news from around the world!</p>
   </div>
@@ -19,9 +19,6 @@
 
   <?php 
     $articles = getNews();
-
-    echo "bookmarks: ";
-    echo implode(",", $_SESSION['bookmarks']);
   ?>
 
   <!-- grid -->

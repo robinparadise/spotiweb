@@ -9,12 +9,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <?php
-// Check if a product is added to the cart
-if (isset($_POST['bookmarks'])) {
+if (false && isset($_POST['bookmarks'])) {
   $id = $_POST['id'];
-  $_SESSION['bookmarks'][] = $id;
-  // unique values
-  $_SESSION['bookmarks'] = array_unique($_SESSION['bookmarks']);
+  // check if id is in array
+  if (!in_array($id, $_SESSION['bookmarks'])) { // Add $id
+    $_SESSION['bookmarks'][] = intval($id); // append
+    $_SESSION['bookmarks'] = array_unique($_SESSION['bookmarks']);
+  } else { // Delete $id
+    $index = array_search($id, $_SESSION['bookmarks']);
+    unset($_SESSION['bookmarks'][$index]);
+    $_SESSION['bookmarks'] = array_values($_SESSION['bookmarks']);
+  }
 }
-
 ?>

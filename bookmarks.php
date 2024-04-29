@@ -18,10 +18,6 @@
 
   <?php 
     $articles = getBookmarks();
-
-    echo "bookmarks: ";
-    echo implode(",", $_SESSION['bookmarks']);
-
   ?>
 
   <!-- grid -->
