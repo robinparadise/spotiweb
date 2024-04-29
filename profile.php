@@ -24,6 +24,11 @@
   <!-- grid -->
   <?php include 'components/grid.php'; ?>
   <?php include 'components/modal.php'; ?>
+
+  <div class="flex text-center m-4">
+    <button onclick="generatePDF()" type="button" class="btn btn-primary">Generate PDF</button>
+  </div>
+
   <?php include 'components/scripts.php'; ?>
 </body>
 

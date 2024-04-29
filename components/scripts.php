@@ -67,4 +67,16 @@
     })
   })
 
+  /* Generate PDF */
+  function generatePDF() {
+    const doc = new jspdf.jsPDF();
+
+    doc.setFontSize(40);
+    doc.text("Octonyan loves jsPDF", 35, 25);
+    doc.addImage("octonyan.jpg", "JPEG", 15, 40, 180, 180);
+    
+    doc.save(`news-${Date.now()}.pdf`);
+  }
+
+
 </script>
