@@ -30,6 +30,10 @@
           <i class="fa-bookmark <?= $active ? "fa-solid" : "fa-regular"; ?>"></i>
         </button>
       </form>
+      <button name="pdf" class="border-0 mx-2"
+      onclick='generatePDF(<?= json_encode($item); ?>)'>
+        <i class="fa-solid fa-file-pdf"></i>
+      </button>
     </div>
 
   </div>
