@@ -8,6 +8,12 @@
 <!-- fontawesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+<!-- Chartist -->
+<!-- Include Chartist CSS/Js  -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+<script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+<script src="https://codeyellowbv.github.io/chartist-plugin-legend/chartist-plugin-legend.js"></script>
+
 
 <?php
 if (false && isset($_POST['bookmarks'])) {
